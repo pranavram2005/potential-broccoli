@@ -9,6 +9,7 @@ const ProductSchema = new Schema({
     file_upload: String,
     file_type: String,
     video: String,
+    rank:Number,
 })
 
 module.exports = mongoose.model('Product', ProductSchema);

@@ -6,6 +6,7 @@ const post = require('./routes/post')
 const view = require('./routes/view')
 const category = require('./routes/category')
 const subcategory = require('./routes/subcategory')
+const enquiry = require('./routes/enquiry')
 const app = express();
 const port = process.env.PORT || 5000;
 const corsOptions = {
@@ -20,6 +21,7 @@ app.use('/view',view)
 app.use('/product',post)
 app.use('/category',category)
 app.use('/subcategory',subcategory)
+app.use('/enquiry',enquiry)
 
 app.listen(port,(error)=>{
     if(!error){
