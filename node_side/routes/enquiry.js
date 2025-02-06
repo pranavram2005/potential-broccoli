@@ -22,6 +22,7 @@ router.route('/view').get(async(req,res)=>{
            .then(enq=>res.json(enq))
            .catch(err=>res.status(400).json('Error:'+err)); 
 })
+
 router.route('/delete/:id').delete(async(req,res)=>{
     try{
         const DeleteEnquiry = await EnquiryModel.deleteOne({"_id":req.params.id});
